@@ -1,0 +1,162 @@
+html {
+	min-width: 400px;
+	background: #EDEBE3;
+	padding: 0.5em 2em 3em 2em;
+}
+
+
+a { color: #06C; }
+a:hover { color: #333;
+}
+a:active { color: #000; }
+
+p { line-height: 140%; }
+
+h1 {
+	font-family: trebuchet ms,arial,verdana,sans-serif;
+	font-weight: bold;
+	font-size: 140%;
+	color: #333;
+	padding-bottom: 2px;
+	border-bottom: 1px dotted #CCC;
+	margin: 0;
+}
+
+.note {
+	background: #EEE;
+	padding: 4px;
+	font-family: tahoma,verdana,sans-serif;
+	font-size: 85%;
+	line-height: 130%;
+}
+
+#main {
+	text-align: left;
+	clear: both;
+	width: 99%;	
+}
+
+#bodyarea {
+	padding: 20px;
+	min-height: 400px;
+}
+
+#topbar {
+	padding-bottom: 0.5em;
+	font-family: trebuchet ms,verdana,sans-serif;
+	font-weight: bold;
+	font-size: 200%;
+}
+
+#topbar a { text-decoration: none; color: #000; }
+
+#topbar a:hover { text-decoration: underline; }
+
+/*///////////// Tabs Code ////////////*/
+
+#tabs {
+	font-family: arial;
+	font-size: 90%;
+	clear: both;
+	text-align:center;
+	float:left;
+	
+}
+
+#tabs ul {
+	display: inline;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#tabs li { float: left; }
+
+#tabs a { 
+	width: 110px;
+	height:auto;
+	 }
+
+#tabs span {
+	width: 110px;
+	height:auto;
+	position: relative;
+	top: 0;
+	margin: 0 2px 0 0;
+	float: left;
+	background-image: url(../images/blue1.gif);
+	background-repeat:no-repeat;
+	padding: 3px 4px 3px 10px;
+	text-decoration: none;
+	color: #333;
+}
+
+#tabs a {
+	position: relative;
+	top: 0;
+	margin: 0px 2px 0 0;
+	float: left;
+	background-image: url(../images/grey1.gif);
+	padding: 3px 4px 3px 10px;
+	text-decoration: none;
+	color: #333;
+	background-repeat:no-repeat;
+}
+
+#tabs a:hover {
+	/*background: #728ff9;*/
+	position: relative;
+	background-repeat:no-repeat;
+	top: 0;
+	padding: 3px 4px 3px 10px;
+	margin-top: 0px;
+	height:auto;
+	color: #F88017;
+}
+
+#tabs a.active {
+	position: relative;
+	top: 0;
+	margin: 0 2px 0 0;
+	float: left;
+	background: #FFF3B3;
+	background-image: url(../images/blue1.gif);
+	background-repeat:no-repeat;
+	padding: 3px 4px 3px 10px;
+	text-decoration: none;
+	color: #333;
+}
+
+#tabs a.active:hover {
+	position: relative;
+	top: 0;
+	margin: 0 2px 0 0;
+	float: left;
+	background: #FFF3B3;
+	padding: 3px 4px 3px 10px;
+	text-decoration: none;
+	color: #333;
+}
+
+#subtabs ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#subtabs li {
+	float: left;
+	padding: 0 8px 0 8px;
+	border-left: 1px solid #CCC;
+	white-space: nowrap;
+}
+
+#subtabs li:first-child { border-left: none; }
+
+#subtabs {
+	font-family: tahoma,verdana,sans-serif;
+	font-size: 85%;
+	background: #a7bbcf;
+	color: #666;
+	padding: 0px 7px 7px 0px; /* for All other Browsers */
+}

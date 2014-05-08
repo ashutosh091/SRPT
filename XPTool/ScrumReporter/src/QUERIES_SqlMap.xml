@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="QUERIES">
+
+    <select id="getDatabaseTimestamp" resultClass="java.sql.Timestamp">
+  		  SELECT SYSDATE FROM DUAL
+    </select>
+    
+    <select id="select_sequence_value" resultClass="java.lang.Long" parameterClass="java.lang.String">
+        SELECT $sequenceName$.NEXTVAL FROM DUAL
+    </select>
+    
+</sqlMap>

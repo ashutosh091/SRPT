@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<!-- View Resolver for JSPs -->
+	<bean id="viewResolver"	class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="requestContextAttribute" value="rc" />
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/" />
+		<!--  -->
+		<!--
+			NOTE: can be *.jsp if you can copy CourseServiceClient.html to
+			CourseServiceClient.jsp
+		-->
+		<!-- <property name="suffix" value=".jsp"/> -->
+		<!-- NOTE: mapping *.html to avoid an extra step -->
+		<!--  -->
+		<property name="suffix" value=".html" />
+	</bean>
+
+
+	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/scrumReporter.svc">scrumReporterController</prop>
+				<prop key="/test.sr.ScrumReporter/scrumMasterService.svc">scrumMasterServiceController</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="scrumReporterController" class="test.sr.mvc.ScrumReporterController">
+		<property name="viewName" value="test.sr.ScrumReporter/ScrumReporter" />
+	</bean>
+
+	<bean id="scrumMasterServiceController" class="test.sr.server.ScrumReportServiceImpl" />
+<!--	
+	<bean id="urlMapping" class="org.gwtwidgets.server.spring.GWTHandler">
+  		<property name="mapping">
+   			<map>
+    			<entry key="/add.rpc" value-ref="ServiceAdd"/>
+   			</map>
+  		</property>
+  		<property name="usingInstrumentation" value="true"/>
+ 	</bean>
+   
+ 	<bean id="ServiceAdd" class="org.gwtwidgets.server.spring.test.serverimpl.ServiceAddImpl"/>
+  --> 	
+</beans>

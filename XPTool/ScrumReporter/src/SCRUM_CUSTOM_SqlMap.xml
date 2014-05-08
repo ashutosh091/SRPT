@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="SCRUM_CUSTOM" >
+
+    <resultMap class="test.sr.client.ScrumData" id="ScrumDataWithUser" extends="SCRUM_DATA.abatorgenerated_ScrumDataResult">
+        <result property="user" resultMap="USERS.abatorgenerated_UsersResult"/>
+    </resultMap>
+    
+	<select id="getScrumData" resultMap="ScrumDataWithUser" parameterClass="java.util.Map">
+			select scrum_data.*, users.* from scrum_data
+			inner join users on users.user_id = scrum_data.user_id 
+			where
+				scrum_data.scrum_date = #scrumDate#
+			order by users.username asc
+    </select>
+    
+	<select id="getScrumsList" resultClass="java.util.Date">
+			select distinct scrum_date from scrum_data order by scrum_date desc 
+    </select>
+    
+    <select id="getUsers" resultMap="USERS.abatorgenerated_UsersResult">
+			select * from users order by username asc 
+    </select>
+    
+</sqlMap>

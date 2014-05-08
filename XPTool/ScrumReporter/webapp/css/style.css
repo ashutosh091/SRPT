@@ -1,0 +1,195 @@
+/* mac hide\*/
+html, body {
+	height:100%
+}
+/* end hide */
+
+html,body {
+	padding:0;
+	margin:0;
+}
+#outer{
+	height: 99.9%;
+	min-height: 100%;
+	width: 900px;
+	color: #333;
+	text-align: left;
+	margin: auto;
+	position: relative;
+	background-color: #fff;
+	background-image: url(../images/background.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+html>body #outer {  /*for mozilla as IE treats height as min-height anyway*/
+	height:auto;
+}
+
+body{
+	text-align:center;
+	background-color: #fff;
+	background-image: url(../images/background_content.gif);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 76%;
+	background-repeat: repeat-x;
+}
+ html >body #minHeight {  /*safari wrapper */
+	float:left;
+	width:0px;
+	height:100%;
+	margin-bottom:-32px;
+}
+
+#header {
+	position:relative;
+	top:0px;
+	left:0px;
+	width:900px;
+	height:110px;
+	color: #000;	
+}
+
+#content_main {
+	position:relative;/*ie needs this to show float */
+	width:900px;
+	float:left;	
+	padding:5px 10px 5px 10px; /* 170 to clear header + extra space */
+	background-image: url(../images/background.gif);
+	background-repeat:no-repeat;
+	
+		
+}
+#login_content_main {	
+	position:relative;/*ie needs this to show float */
+	width:900px;
+	float:left;
+	padding:250px 10px 30px 350px; /* 170 to clear header + extra space */
+}
+.loginTable
+{	
+	margin: 0;
+	float: right;
+	padding: 175px 30px 30 0;
+	z-index: 10;
+	background-color: #eeeeee;
+	width: 100%;
+}
+.messageFont{
+	font-size: 0.8em;	
+	font-family: Arial;
+}
+
+.row
+{
+	font-size: 0.8em;
+	background-color:#ffffff;
+	text-align: left;
+}
+.altRow
+{
+	font-size: 0.8em;
+	background-color:#efefef;
+	text-align: left;
+}
+
+.tableBorder 
+{
+	/*border: 1px solid #aedae7;*/
+	/*background-color: #e5f4f8;*/
+	width: 100%;
+}
+
+#label {
+	font-family : Arial;
+	font-size: 12px;
+	font-weight: bold;				
+}
+.columnHeader{	
+	padding: 0.8em 0.85em 0.8em 0.85em;
+	font-size: 0.8em;
+	background-color: #B9CBE3;
+	color: #3C3D6E;
+	font-weight: bold;
+	height: 20;
+}
+.linkColor{
+	font-size: 1em;	
+	color:#05769b;
+}
+#errorMessage{
+	font-size: 12px;	
+	font-family: arial,sans-serif;
+	color: #F7020D;
+	font-weight: bold;	
+}
+.noteFont{
+	font-size: 0.8em;
+	font-style: italic;
+	color:#888888;
+}
+#footer {
+	width: 920px;
+	clear:both;	
+	bottom:0px;
+	position:absolute;
+	height:30px;
+	text-align: right;
+	background-image: url(../images/bgrnd_footer.gif);
+	font-size: 11px;
+	color: #1d3d6b;
+}
+
+#footer span.leftside {
+	float: left;
+	padding: 7px 0 0 50px;
+}
+.breakPointColor{	
+	color: #F7020D;
+}
+.executeParallelStyle{
+	font-size: 0.8em;	
+	font-family: Arial;	
+	color: #06aa4f;
+	font-weight: bold;	
+}
+.altExecuteParallelStyle{
+	font-size: 0.8em;	
+	font-family: Arial;	
+	color: #0000FF;
+	font-weight: bold;	
+}
+#clearfooter {  /* to clear footer */
+	width:100%;
+	height:32px;
+	clear:both
+}
+#backgroundTable{
+	background:#EAEAEA;
+	width: 99%;	 	
+}
+#pageTitle{	
+	/*color: #F88017;*/
+	color:#4E6491;
+	background:#D3D3D3;	
+	font-size: 14px;	
+	font-family: Arial;
+	font-weight: bold;	
+	text-align: left;
+	padding-left: 8px;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	height: 20;
+}
+#feildLabel{
+	font-size: 0.8em;	
+	font-family: Arial;
+	color: #000080;	
+}
+.completeStatus{
+	color: #06aa4f;		
+}
+.failedStatus{
+	color: #F7020D;	
+}
+.inheritStatus{
+}

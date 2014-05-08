@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee" 
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+
+  <display-name>XPTool</display-name>
+
+   <context-param>
+	<param-name>contextConfigLocation</param-name>
+	<param-value>
+	        /WEB-INF/applicationContext-xptool.xml
+	</param-value>
+   </context-param>
+
+   <context-param>
+	<param-name>log4jConfigLocation</param-name>
+	<param-value>/WEB-INF/classes/log4j.properties</param-value>
+   </context-param>
+
+	<!-- 3. Setup three listeners -->
+	<!--    a) Setup a listener to connect spring with the web context -->
+ 	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <!--	b) Setup a listener to connect spring with log4J -->
+<!--       <listener>
+	<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+    </listener>-->
+    
+    <servlet>
+        <servlet-name>xptool</servlet-name>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>xptool</servlet-name>
+        <url-pattern>*.svc</url-pattern>
+    </servlet-mapping> 
+
+ <!--  4.  The Usual Welcome File List -->
+	<welcome-file-list>
+	    <welcome-file></welcome-file>
+	</welcome-file-list>
+
+    <!-- 5. Servlet Mapping section -->
+	<session-config>
+   		 <session-timeout>60</session-timeout>
+ 	</session-config>
+	
+</web-app>

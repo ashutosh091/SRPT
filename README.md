@@ -1,4 +1,4 @@
 SRPT
 ====
 
-Scrum ReRorter Tool
+Scrum RePorter Tool
